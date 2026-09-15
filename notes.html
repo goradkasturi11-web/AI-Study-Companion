@@ -1,10 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Smart Notes</title><link rel="stylesheet" href="css/style.css"></head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Notes | AI Study Companion</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
-<header class="navbar"><a class="logo" href="dashboard.html">🤖 AI Study Companion</a><nav><a href="dashboard.html">Dashboard</a><a href="subjects.html">Subjects</a><a href="quiz.html">Quiz</a><a href="ai-assistant.html">AI</a></nav></header>
-<main class="section two-col"><section><span class="badge">SMART NOTES</span><h1>Summarize Your Notes</h1><p>Paste study material below. Phase 1 uses a demo summary.</p>
-<textarea id="notesInput" rows="12" placeholder="Paste your study notes here..."></textarea><button class="btn" id="summaryBtn">Generate Summary</button></section>
-<section class="result"><h2>Summary</h2><div id="summaryOutput"><p>Your generated summary will appear here.</p></div></section></main>
-<footer>© 2026 AI Study Companion</footer><script src="js/script.js"></script>
-</body></html>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <a class="logo" href="dashboard.html">
+            🤖 AI Study Companion
+        </a>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="notes.html">Notes</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="ai-assistant.html">AI</a>
+            <a href="planner.html">Planner</a>
+            <a href="progress.html">Progress</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="section">
+
+        <span class="badge">SMART NOTES</span>
+
+        <h1>My Notes 📝</h1>
+
+        <p>
+            Create, save and manage your study notes.
+        </p>
+
+
+        <!-- =========================
+             CREATE NOTE
+        ========================== -->
+
+        <section class="card">
+
+            <h2>Create New Note</h2>
+
+            <label>
+                Note Title
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Enter note title"
+                >
+            </label>
+
+            <br>
+
+            <label>
+                Note Content
+                <textarea
+                    id="noteContent"
+                    rows="10"
+                    placeholder="Write your study notes here..."
+                ></textarea>
+            </label>
+
+            <br>
+
+            <button
+                class="btn"
+                id="saveNoteBtn"
+            >
+                Save Note
+            </button>
+
+            <button
+                class="btn secondary"
+                id="cancelEditBtn"
+                style="display: none;"
+            >
+                Cancel Edit
+            </button>
+
+            <p id="noteMessage"></p>
+
+        </section>
+
+
+        <!-- =========================
+             SAVED NOTES
+        ========================== -->
+
+        <section class="section">
+
+            <h2>My Saved Notes</h2>
+
+            <div id="notesList">
+
+                <p>Loading notes...</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SUMMARY
+        ========================== -->
+
+        <section class="two-col">
+
+            <section>
+
+                <span class="badge">
+                    AI SUMMARY
+                </span>
+
+                <h2>Summarize Your Notes</h2>
+
+                <p>
+                    Paste study material below and generate a quick summary.
+                </p>
+
+                <textarea
+                    id="notesInput"
+                    rows="12"
+                    placeholder="Paste study notes here..."
+                ></textarea>
+
+                <br><br>
+
+                <button
+                    class="btn"
+                    id="summaryBtn"
+                >
+                    Generate Summary
+                </button>
+
+            </section>
+
+
+            <!-- SUMMARY RESULT -->
+
+            <section class="result">
+
+                <h2>Summary</h2>
+
+                <div id="summaryOutput">
+
+                    <p>
+                        Your generated summary will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        © 2026 AI Study Companion
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
